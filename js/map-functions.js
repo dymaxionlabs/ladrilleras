@@ -22,7 +22,7 @@ window.onload = function() {
     'FIVE_COLOR': '#b30000'
   };
 
-  var geoJsonLayer = new L.GeoJSON.AJAX("data.geojson", {
+  var geoJsonLayer = new L.GeoJSON.AJAX("ladrilleras_demo.geojson", {
       style: function(feature) {
           style = Object.assign({}, baseStyle);
           if (feature.properties.prob >= 0 && feature.properties.prob <= 0.20) {
