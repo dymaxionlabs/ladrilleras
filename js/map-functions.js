@@ -5,7 +5,7 @@ window.onload = function() {
   });
 
   var map = L.map('map', {
-    center: [-32.8453, -68.7571], zoom: 15,
+    center: [-32.896114, -68.833125], zoom: 15,
     layers: [capaSatelite]
   });
 
