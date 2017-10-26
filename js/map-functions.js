@@ -18,7 +18,7 @@ window.onload = function() {
     'FIVE_COLOR': '#b30000'
   };
 
-  var geoJsonLayer = new L.GeoJSON.AJAX("data.geojson", {
+  var geoJsonLayer = new L.GeoJSON.AJAX("dataa.geojson", {
       style: function(feature) {
           if (feature.properties.prob >= 0 && feature.properties.prob <= 0.20) {
               return {color: paletteColors.FIRST_COLOR};
