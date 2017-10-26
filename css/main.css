@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.map-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.legends {
+	position: absolute;
+	bottom: 4px;
+	left: 5px;
+	background: white;
+	z-index: 2000;
+	width: auto;
+}
+
+.legends-list {
+	list-style: none;
+}
+
+.list {
+	text-align: left;
+	padding: 6px;
+	color: white;
+	font-size: 12px;
+}

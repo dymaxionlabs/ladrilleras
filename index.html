@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dymaxion Labs - Potenciales villas y asentamientos</title>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<script src="js/leaflet.js"></script>
+	<script src="js/leaflet.ajax.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJuAYxkhq9sbFYw6jcfpHYyTHDvF8eMhY&libraries=places"></script>
+</head>
+<body>
+	<div id="map" class="map-container">
+		<div class="legends">
+			<ul class="legends-list">
+				<li class="list" style="background-color: #fef0d9; color: black;">0.00 - 0.20</li>
+				<li class="list" style="background-color: #fdcc8a; color: black">0.20 - 0.40</li>
+				<li class="list" style="background-color: #fc8d59;">0.40 - 0.60</li>
+				<li class="list" style="background-color: #e34a33;">0.60 - 0.80</li>
+				<li class="list" style="background-color: #b30000;">0.80 - 1.00</li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/map-functions.js"></script>
+</body>
+</html>
