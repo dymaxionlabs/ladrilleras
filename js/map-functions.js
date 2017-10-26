@@ -5,10 +5,14 @@ window.onload = function() {
   });
 
   var map = L.map('map', {
-    center: [-34.614948, -58.439854], zoom: 11,
+    center: [-32.8453, -68.7571], zoom: 15,
     layers: [capaSatelite]
   });
 
+  var baseStyle = {
+    stroke: true,
+    weight: 0.4
+  };
 
   var paletteColors = {
     'FIRST_COLOR': '#fef0d9',
@@ -20,17 +24,19 @@ window.onload = function() {
 
   var geoJsonLayer = new L.GeoJSON.AJAX("data.geojson", {
       style: function(feature) {
+          style = Object.assign({}, baseStyle);
           if (feature.properties.prob >= 0 && feature.properties.prob <= 0.20) {
-              return {color: paletteColors.FIRST_COLOR};
+            style.color = paletteColors.FIRST_COLOR;
           } else if (feature.properties.prob >= 0.20 && feature.properties.prob <= 0.40) {
-            return {color: paletteColors.SECOND_COLOR};
+            style.color = paletteColors.SECOND_COLOR;
           } else if (feature.properties.prob >= 0.40 && feature.properties.prob <= 0.60) {
-            return {color: paletteColors.THIRD_COLOR};
+            style.color = paletteColors.THIRD_COLOR;
           } else if (feature.properties.prob >= 0.60 && feature.properties.prob <= 0.80) {
-            return {color: paletteColors.FOUR_COLOR}; 
+            style.color = paletteColors.FOUR_COLOR;
           } else if (feature.properties.prob >= 0.80 && feature.properties.prob <= 1) {
-            return {color: paletteColors.FIVE_COLOR};
+            style.color = paletteColors.FIVE_COLOR;
           }
+          return style;
       }
   }).addTo(map);
 }
