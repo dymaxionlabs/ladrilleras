@@ -5,7 +5,7 @@ window.onload = function() {
   });
 
   var map = L.map('map', {
-    center: [-32.896114, -68.833125], zoom: 12,
+    center: [-27.486590, -58.816205], zoom: 12,
     layers: [capaSatelite]
   });
 
@@ -22,7 +22,7 @@ window.onload = function() {
     'FIVE_COLOR': '#b30000'
   };
 
-  var geoJsonLayer = new L.GeoJSON.AJAX("ladrilleras_demo.geojson", {
+  var geoJsonLayer = new L.GeoJSON.AJAX("ladrilleras_demo_mza_cor.geojson", {
       style: function(feature) {
           style = Object.assign({}, baseStyle);
           if (feature.properties.prob >= 0 && feature.properties.prob <= 0.20) {
